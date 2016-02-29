@@ -12,7 +12,8 @@ RUN apt-get update -qq
 # -> should be added to bitriseio/docker-bitrise-base
 
 # Dependencies to execute Android builds
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-7-jdk libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1
+RUN add-apt-repository ppa:openjdk-r/ppa -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jdk libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1
 
 
 # ------------------------------------------------------
