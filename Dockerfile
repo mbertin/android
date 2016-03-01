@@ -24,7 +24,6 @@ RUN cd /opt && tar -xvzf android-sdk.tgz
 RUN cd /opt && rm -f android-sdk.tgz
 
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-ENV JAVA8_HOME
 # ------------------------------------------------------
 # --- Install Android SDKs and other build packages
 
