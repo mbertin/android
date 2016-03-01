@@ -5,14 +5,14 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 
 # ------------------------------------------------------
 # --- Install required tools
-
+RUN add-apt-repository ppa:openjdk-r/ppa -y
 RUN apt-get update -qq
 
 # Base (non android specific) tools
 # -> should be added to bitriseio/docker-bitrise-base
 
 # Dependencies to execute Android builds
-RUN add-apt-repository ppa:openjdk-r/ppa -y
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jdk libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1
 
 
