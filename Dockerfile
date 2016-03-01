@@ -24,7 +24,7 @@ RUN cd /opt && tar -xvzf android-sdk.tgz
 RUN cd /opt && rm -f android-sdk.tgz
 
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-
+ENV JAVA8_HOME
 # ------------------------------------------------------
 # --- Install Android SDKs and other build packages
 
@@ -84,4 +84,6 @@ RUN mvn --version
 RUN apt-get clean
 
 ENV BITRISE_DOCKER_REV_NUMBER_ANDROID 2016_01_09_1
+ENV JAVA8_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+
 CMD bitrise -version
