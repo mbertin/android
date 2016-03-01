@@ -84,6 +84,6 @@ RUN apt-get clean
 
 ENV BITRISE_DOCKER_REV_NUMBER_ANDROID 2016_01_09_1
 ENV JAVA8_HOME /usr/lib/jvm/java-8-openjdk-amd64/
-RUN export JAVA_HOME=$JAVA8_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
 CMD bitrise -version
