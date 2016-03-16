@@ -42,11 +42,11 @@ RUN echo y | android update sdk --no-ui --all --filter \
 # SDKs
 # Please keep these in descending order!
 RUN echo y | android update sdk --no-ui --all --filter \
-  android-23,android-22,android-21,android-20,android-19,android-17,android-15,android-10
+  android-N,android-23,android-22,android-21,android-20,android-19,android-17,android-15,android-10
 # build tools
 # Please keep these in descending order!
 RUN echo y | android update sdk --no-ui --all --filter \
-  build-tools-23.0.2,build-tools-23.0.1,build-tools-22.0.1,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,build-tools-17.0.0
+  build-tools-24.0.0-preview,build-tools-23.0.2,build-tools-23.0.1,build-tools-22.0.1,build-tools-21.1.2,build-tools-20.0.0,build-tools-19.1.0,build-tools-17.0.0
 
 # Android System Images, for emulators
 # Please keep these in descending order!
@@ -56,7 +56,6 @@ RUN echo y | android update sdk --no-ui --all --filter \
 # Extras
 RUN echo y | android update sdk --no-ui --all --filter \
   extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services
-
 
 # ------------------------------------------------------
 # --- Install Gradle from PPA
